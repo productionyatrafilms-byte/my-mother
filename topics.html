@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-lang-key="title"></title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <style>
+    .page-title {
+      background: #FFAE00;
+      top: 4%;
+      box-shadow: 0vw 0.4vw 0.5vw rgba(0, 0, 0, 0.35);
+    }
+    .page-title span {
+      color: white;
+      font-size: 8vw;
+      font-weight: 600;
+    }
+  </style>
+  <body>
+    <a class="home-button home-btn" href="index.html" aria-label="Home">
+      <img src="./assets/images/home-btn.png" alt="Home" />
+    </a>
+    <!-- nav-container -->
+    <div class="language-container">
+      <div class="english active">E</div>
+      <div class="hindi">H</div>
+      <div class="gujrati">G</div>
+    </div>
+    <main>
+      <a class="page-title" href="topics.html">
+        <span data-lang-key="title"></span>
+      </a>
+
+      <div class="topics">
+        <a href="topic-1.html" class="card card-1">
+          <img src="./assets/images/topic-1.png" alt="Topic 1" />
+          <span data-lang-key="title-1"></span>
+        </a>
+        <a href="topic-2.html" class="card card-2">
+          <img src="./assets/images/topic-2.png" alt="Topic 2" />
+          <span data-lang-key="title-2"></span>
+        </a>
+        <a href="topic-3.html" class="card card-3">
+          <img src="./assets/images/topic-3.png" alt="Topic 3" />
+          <span data-lang-key="title-3"></span>
+        </a>
+      </div>
+    </main>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
