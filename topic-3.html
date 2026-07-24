@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-lang-key="title-1"></title>
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <style>
+      .hero-shadow {
+        width: 70vw;
+        margin: 0 auto;
+        position: relative;
+        filter: drop-shadow(0 1.2vw 0.5vw rgba(95, 11, 152, 0.724))
+          drop-shadow(0 0.3vw 0.5vw rgba(96, 12, 145, 0.506));
+      }
+
+      .hero-img {
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+        position: relative;
+        top: -8%;
+        z-index: 1;
+        overflow: hidden;
+        isolation: isolate;
+        background-color: #e6712b;
+
+        -webkit-mask-image: url("./assets/images/mask-image.png");
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        -webkit-mask-size: 100% 100%;
+
+        mask-image: url("./assets/images/mask-image.png");
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: 100% 100%;
+      }
+
+      .hero-swiper,
+      .hero-swiper .swiper-wrapper,
+      .hero-swiper .swiper-slide {
+        width: 100%;
+        height: 100%;
+      }
+
+      .hero-swiper .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .hero-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .pranam-link {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 4vw;
+    bottom: 4vw;
+    width: 9vw;
+    height: auto;
+    text-decoration: none;
+    z-index: 9999;
+    pointer-events: auto;
+    cursor: pointer;
+    animation: pranamPop 1.2s ease-in-out infinite;
+    transform-origin: center;
+    opacity:0;
+    visibility:hidden;
+  }
+    
+.pranam-link img {
+  position: relative;
+  width: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.pranam-link span {
+  position: absolute;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3vw;
+  padding-right: 1vw;
+    font-family: "BalooRegular";
+
+}
+
+@keyframes pranamPop {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.12);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+  .pranam-link.show {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+
+    </style>
+  </head>
+
+  <body>
+     <a href="pranam.html" class="pranam-link">
+      <img src="./assets/images/arowAsset.png" alt="" />
+      <span data-lang-key="pranam"></span>
+    </a>
+
+    <a class="home-button home-btn" href="topics.html" aria-label="Home">
+      <img src="./assets/images/home-btn.png" alt="Home" />
+    </a>
+
+    <div class="language-container">
+      <div class="english active">E</div>
+      <div class="hindi">H</div>
+      <div class="gujrati">G</div>
+    </div>
+
+    <main>
+      <div class="hero-shadow">
+        <div class="hero-img">
+          <div class="swiper hero-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <video class="hero-video" autoplay muted loop playsinline>
+                  <source src="./assets/videos/3-1.mp4" type="video/mp4" />
+                </video>
+              </div>
+
+              <div class="swiper-slide">
+                <video class="hero-video" autoplay muted loop playsinline>
+                  <source src="./assets/videos/3-2.mp4" type="video/mp4" />
+                </video>
+              </div>
+
+              <div class="swiper-slide">
+                <video class="hero-video" autoplay muted loop playsinline>
+                  <source src="./assets/videos/3-3.mp4" type="video/mp4" />
+                </video>
+              </div>
+
+              <div class="swiper-slide">
+                <video class="hero-video" autoplay muted loop playsinline>
+                  <source src="./assets/videos/3-4.mp4" type="video/mp4" />
+                </video>
+              </div>
+
+              <div class="swiper-slide">
+                <video class="hero-video" autoplay muted loop playsinline>
+                  <source src="./assets/videos/3-5.mp4" type="video/mp4" />
+                </video>
+              </div>
+
+              <div class="swiper-slide">
+                <video class="hero-video" autoplay muted loop playsinline>
+                  <source src="./assets/videos/3-6.mp4" type="video/mp4" />
+                </video>
+              </div>
+
+              <div class="swiper-slide">
+                <video class="hero-video" autoplay muted loop playsinline>
+                  <source src="./assets/videos/3-7.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-bottom-content">
+        <div class="swiper-title" data-lang-key="title-3"></div>
+
+        <button class="hero-nav hero-prev" type="button">
+          <img src="./assets/images/prev-btn.png" alt="Previous" />
+        </button>
+
+        <div class="swiper hero-caption">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div data-lang-key="slide-3.1"></div>
+            </div>
+
+            <div class="swiper-slide">
+              <div data-lang-key="slide-3.2"></div>
+            </div>
+
+            <div class="swiper-slide">
+              <div data-lang-key="slide-3.3"></div>
+            </div>
+
+            <div class="swiper-slide">
+              <div data-lang-key="slide-3.4"></div>
+            </div>
+
+            <div class="swiper-slide">
+              <div data-lang-key="slide-3.5"></div>
+            </div>
+
+            <div class="swiper-slide">
+              <div data-lang-key="slide-3.6"></div>
+            </div>
+
+            <div class="swiper-slide">
+              <div data-lang-key="slide-3.7"></div>
+            </div>
+          </div>
+        </div>
+
+        <button class="hero-nav hero-next" type="button">
+          <img src="./assets/images/next-btn.png" alt="Next" />
+        </button>
+      </div>
+
+               <div class="pages">
+           <a class="page page-1" href="topic-1.html" data-lang-key="num-1"></a>
+          <a class="page page-2" href="topic-2.html" data-lang-key="num-2"></a>
+          <a class="page page-3 active" href="topic-3.html" data-lang-key="num-3"></a>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assets/js/app.js"></script>
+
+    <script>
+      // click sound effects
+      const homeBtnClickSound = new Audio("./assets/audio/pop.mp3");
+      const pageClickSound = new Audio("./assets/audio/11.mp3");
+      const swipeClickSound = new Audio("./assets/audio/swipe.mp3");
+
+      function playClickSound(audio) {
+        audio.currentTime = 0;
+        audio.play().catch(function (err) {
+          console.error("Error playing click sound:", err);
+        });
+      }
+
+      function navigateWithSound(link, audio, delay) {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const destination = link.getAttribute("href");
+
+          playClickSound(audio);
+
+          setTimeout(function () {
+            window.location.href = destination;
+          }, delay);
+        });
+      }
+
+      const prevBtn = document.querySelector(".hero-prev");
+      const nextBtn = document.querySelector(".hero-next");
+      const pranamLink = document.querySelector(".pranam-link");
+
+      const textSwiper = new Swiper(".hero-caption", {
+        slidesPerView: 1,
+        allowTouchMove: false,
+        speed: 800,
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true,
+        },
+      });
+
+      function handleVideos(swiper) {
+        const videos = document.querySelectorAll(".hero-video");
+
+        videos.forEach((video, index) => {
+          if (index === swiper.activeIndex) {
+            video.currentTime = 0;
+            video.play().catch(() => {});
+          } else {
+            video.pause();
+          }
+        });
+      }
+
+      function updateNavButtons(swiper) {
+        const prevImg = prevBtn?.querySelector("img");
+        const nextImg = nextBtn?.querySelector("img");
+
+        if (swiper.isBeginning) {
+          if (prevImg) prevImg.style.visibility = "hidden";
+          prevBtn.style.pointerEvents = "none";
+        } else {
+          if (prevImg) prevImg.style.visibility = "visible";
+          prevBtn.style.pointerEvents = "auto";
+        }
+
+        if (swiper.isEnd) {
+          if (nextImg) nextImg.style.visibility = "hidden";
+          nextBtn.style.pointerEvents = "none";
+        } else {
+          if (nextImg) nextImg.style.visibility = "visible";
+          nextBtn.style.pointerEvents = "auto";
+        }
+      }
+
+      function updatePranamLink(swiper) {
+        if (!pranamLink) return;
+
+        if (swiper.isEnd) {
+          pranamLink.classList.add("show");
+        } else {
+          pranamLink.classList.remove("show");
+        }
+      }
+
+      const heroSwiper = new Swiper(".hero-swiper", {
+        slidesPerView: 1,
+        loop: false,
+        speed: 800,
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true,
+        },
+        navigation: {
+          nextEl: ".hero-next",
+          prevEl: ".hero-prev",
+        },
+        controller: {
+          control: textSwiper,
+        },
+        on: {
+          init: function () {
+            handleVideos(this);
+            updateNavButtons(this);
+            updatePranamLink(this);
+          },
+          slideChange: function () {
+            handleVideos(this);
+            updateNavButtons(this);
+            updatePranamLink(this);
+          },
+        },
+      });
+
+      textSwiper.controller.control = heroSwiper;
+
+      document.addEventListener("DOMContentLoaded", () => {
+        updateNavButtons(heroSwiper);
+        updatePranamLink(heroSwiper);
+      });
+
+      // home button click sound (navigates to index.html)
+      const homeBtn = document.querySelector(".home-btn");
+      if (homeBtn) {
+        navigateWithSound(homeBtn, homeBtnClickSound, 1000);
+      }
+
+      // page link click sound (navigates to topic-X.html)
+      const pageLinks = document.querySelectorAll(".pages .page");
+      pageLinks.forEach(function (link) {
+        navigateWithSound(link, pageClickSound, 1000);
+      });
+
+      // hero prev/next navigation click sound (no navigation, just swiper control)
+      if (prevBtn) {
+        prevBtn.addEventListener("click", function () {
+          playClickSound(swipeClickSound);
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener("click", function () {
+          playClickSound(swipeClickSound);
+        });
+      }
+    </script>
+  </body>
+</html>
