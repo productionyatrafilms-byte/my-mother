@@ -2,6 +2,7 @@
 {
   "English": {
     "title": "My Mother",
+    "sub-title":"Mother is everything for us.",
     "title-1": "Super Hero",
     "title-2": "Qualities of Mother",
     "title-3": "Our Responsibilities",
@@ -59,6 +60,7 @@
     "num-2": "२",
     "num-3": "३",
     "num-4": "४",
+    "sub-title":"माँ हमारे लिए सब कुछ हैं।",
 
     "subtitle-1.1": "शेफ",
     "subtitle-1.2": "डॉक्टर",
@@ -102,6 +104,7 @@
 
   "Gujarati": {
     "title": "મારી મા",
+    "sub-title":"મા આપણા માટે બધું જ છે.",
     "title-1": "સુપર હીરો",
     "title-2": "માના ગુણ",
     "title-3": "આપણી જવાબદારીઓ",
