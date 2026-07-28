@@ -95,6 +95,12 @@
         z-index: 1000;
       }
 
+      .video-btn.hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+
       .start-video-btn {
         width: 14vw;
         height:4vw;
@@ -730,6 +736,8 @@
       const prevBtn = document.querySelector(".hero-prev");
       const nextBtn = document.querySelector(".hero-next");
 
+      const videoBtnWrapper = document.querySelector(".video-btn");
+
       const textSwiper = new Swiper(".hero-caption", {
         slidesPerView: 1,
         allowTouchMove: false,
@@ -751,6 +759,14 @@
             video.pause();
           }
         });
+
+        if (videoBtnWrapper) {
+          if (swiper.activeIndex === 0) {
+            videoBtnWrapper.classList.remove("hidden");
+          } else {
+            videoBtnWrapper.classList.add("hidden");
+          }
+        }
       }
 
       function updateNavButtons(swiper) {
