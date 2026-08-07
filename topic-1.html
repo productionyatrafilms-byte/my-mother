@@ -19,6 +19,7 @@
     <style>
       .hero-shadow {
         width: 70vw;
+        height: 100%;
         margin: 0 auto;
         position: relative;
         filter: drop-shadow(0 1.2vw 0.5vw rgba(95, 11, 152, 0.724))
@@ -876,9 +877,7 @@
       function updateProgress() {
         if (!popupVideo.duration) return;
 
-        if (popupVideo.currentTime > maxAllowedTime) {
-          maxAllowedTime = popupVideo.currentTime;
-        }
+        maxAllowedTime = popupVideo.currentTime;
 
         savedVideoTime = popupVideo.currentTime;
 
@@ -901,14 +900,7 @@
         const selectedTime =
           (Number(videoProgress.value) / 100) * popupVideo.duration;
 
-        if (selectedTime <= maxAllowedTime) {
-          currentTimeText.textContent = formatTime(selectedTime);
-        } else {
-          const allowedProgress = (maxAllowedTime / popupVideo.duration) * 100;
-
-          videoProgress.value = allowedProgress;
-          currentTimeText.textContent = formatTime(maxAllowedTime);
-        }
+        currentTimeText.textContent = formatTime(selectedTime);
       }
 
       function handleProgressChange() {
@@ -917,17 +909,9 @@
         const selectedTime =
           (Number(videoProgress.value) / 100) * popupVideo.duration;
 
-        if (selectedTime <= maxAllowedTime) {
-          popupVideo.currentTime = selectedTime;
-          savedVideoTime = selectedTime;
-        } else {
-          popupVideo.currentTime = maxAllowedTime;
-
-          const allowedProgress = (maxAllowedTime / popupVideo.duration) * 100;
-
-          videoProgress.value = allowedProgress;
-          savedVideoTime = maxAllowedTime;
-        }
+        popupVideo.currentTime = selectedTime;
+        savedVideoTime = selectedTime;
+        maxAllowedTime = selectedTime;
 
         isProgressDragging = false;
         updateProgress();
