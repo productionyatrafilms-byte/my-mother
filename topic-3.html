@@ -31,12 +31,12 @@
         isolation: isolate;
         background-color: #e6712b;
 
-        -webkit-mask-image: url("./assets/images/mask-image.png");
+        -webkit-mask-image: var(--mask-image);
         -webkit-mask-repeat: no-repeat;
         -webkit-mask-position: center;
         -webkit-mask-size: 100% 100%;
 
-        mask-image: url("./assets/images/mask-image.png");
+        mask-image: var(--mask-image);
         mask-repeat: no-repeat;
         mask-position: center;
         mask-size: 100% 100%;
@@ -247,6 +247,7 @@
     </main>
 
     <script src="./assets/js/swiper-bundle.min.js"></script>
+    <script src="./assets/js/data.js"></script>
     <script src="./assets/js/app.js"></script>
     <script src="./assets/js/djp.js"></script>
     <script>

@@ -4,7 +4,8 @@ const btnGu = document.querySelector(".gujrati");
 
 const LANG_KEY = "selectedLanguage";
 const DEFAULT_LANG = "English";
-let translations = {};
+// translations come from assets/js/data.js, which must be loaded first
+let translations = typeof data !== "undefined" ? data : {};
 
 // audio setup for language switch sounds
 const langAudio = {
@@ -91,14 +92,7 @@ function applyLanguage(lang, save = true) {
 // load saved language on refresh/page load/page navigation
 window.addEventListener("DOMContentLoaded", () => {
   const savedLang = localStorage.getItem(LANG_KEY) || DEFAULT_LANG;
-
-  fetch("./assets/json/data.json", { cache: "no-store" })
-    .then((res) => res.json())
-    .then((data) => {
-      translations = data;
-      applyLanguage(savedLang, false);
-    })
-    .catch((err) => console.error("Error loading translations:", err));
+  applyLanguage(savedLang, false);
 });
 
 // button clicks
