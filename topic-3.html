@@ -296,6 +296,13 @@
 
         videos.forEach((video, index) => {
           if (index === swiper.activeIndex) {
+            // With effect:"fade", Swiper positions slides via CSS
+            // transform/opacity. Chromium sometimes fails to paint a <video>
+            // on the newly-revealed slide until something forces a reflow
+            // (e.g. a window resize) — toggling display forces that repaint.
+            video.style.display = "none";
+            void video.offsetHeight;
+            video.style.display = "";
             video.currentTime = 0;
             video.play().catch(() => {});
           } else {
